@@ -6,7 +6,6 @@ class TestingTest(unittest.TestCase):
 		self.app = testing.app.test_client()
 		out = self.app.get('/')
 		assert '200 OK' in out.status
-		assert 'charset=uft-8' in out.content_type
 		assert 'text/html' in out.content_type
 
 if __name__ == "__main__":
